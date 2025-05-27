@@ -21,7 +21,7 @@ public class TransactionService {
     public Transaction createDeposit(Long accountId, BigDecimal amount){
         // 1. Find the account
         Account account = accountRepository.findById(accountId)
-                .orElseThrow(() -> new AccountNotFoundException(accountId));
+                .orElseThrow(() -> new AccountNotFoundException(accountId)); // throw Exception when an account is not found
 
     }
 }
